@@ -4,12 +4,12 @@ import React from 'react'
 
 
 export default function Card (props:any){
-   const {title, singer } = props;
+   const {title, singer, image } = props;
     return (
         <div className="relative max-w-xs overflow-hidden
         rounded-2xl shadow-lg group 
         ">
-          <img src= "/fight-club.jpeg" alt="image of the song to be played..."
+          <img src= {image} alt="image of the song to be played..."
           className="transition-transform group-hover:scale-110
           duration-200  w-full h-auto
           "
@@ -21,7 +21,7 @@ export default function Card (props:any){
                <h1>{title}</h1>
                <h3>by {singer}</h3>
                <div className="space-x-4 mt-4">
-                <button className="text-white">
+                <button className="text-white" >
                     {/* <Image src='/play.png' width={10} height={10} alt="" /> */}
                     play
                 </button>
